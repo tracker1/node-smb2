@@ -11,7 +11,7 @@ The development is still at an experimental stage and should not be yet consider
 ## Installation
 
 ```bash
-npm install -S smb2
+npm install -S @marsaud/smb2
 ```
 
 ## API
@@ -167,6 +167,10 @@ smb2Client.createWriteStream('path\\to\\the\\file', function (err, readStream) {
 ```
 ### smb2Client.ensureDir ( path, callback )
 Ensures that the directory exists. If the directory structure does not exist, it is created.
+
+## Contributors
+- [Benjamin Chelli](https://github.com/bchelli)
+- [Fabrice Marsaud](https://github.com/marsaud)
 
 ## References
 
