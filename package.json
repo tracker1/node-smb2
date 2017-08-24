@@ -22,7 +22,7 @@
   "dependencies": {
     "babel-runtime": "^5.8.34",
     "bluebird": "^2.10.2",
-    "ntlm": "0.1.2"
+    "ntlm": "^0.1.2"
   },
   "keywords": [
     "SMB",
