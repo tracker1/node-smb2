@@ -11,11 +11,11 @@ The development is still at an experimental stage and should not be yet consider
 ## Installation
 
 ```bash
-npm install -S @dcyou/smb2
+npm install -S dcyou/node-smb2
 ```
 or with yarn
 ```bash
-yarn add @dcyou/smb2
+yarn add dcyou/node-smb2
 ```
 
 ## API
