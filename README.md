@@ -36,7 +36,7 @@ the parameter ```options``` accepts this list of attributes:
 Example:
 ```javascript
 // load the library
-var SMB2 = require('node-smb2');
+var SMB2 = require('@dcyou/smb2');
 
 // create an SMB2 instance
 var smb2Client = new SMB2({
