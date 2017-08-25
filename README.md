@@ -11,7 +11,7 @@ The development is still at an experimental stage and should not be yet consider
 ## Installation
 
 ```bash
-npm install -S @marsaud/smb2
+npm install -S @dcyou/smb2
 ```
 
 ## API
@@ -171,6 +171,7 @@ Ensures that the directory exists. If the directory structure does not exist, it
 ## Contributors
 - [Benjamin Chelli](https://github.com/bchelli)
 - [Fabrice Marsaud](https://github.com/marsaud)
+- [David Turbert](https://github.com/dcyou)
 
 ## References
 
