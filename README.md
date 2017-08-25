@@ -47,12 +47,13 @@ var smb2Client = new SMB2({
 });
 ```
 
-### smb2Client.readdir ( path, callback )
+### smb2Client.readdir ( path, options, callback )
 Asynchronous readdir(3). Reads the contents of a directory. The callback gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
 
 Example:
 ```javascript
-smb2Client.readdir('Windows\\System32', function(err, files){
+let options = {regex: /42isthesolution/i};
+smb2Client.readdir('Windows\\System32', options, function(err, files){
     if(err) throw err;
     console.log(files);
 });
