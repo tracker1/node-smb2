@@ -13,6 +13,10 @@ The development is still at an experimental stage and should not be yet consider
 ```bash
 npm install -S @dcyou/smb2
 ```
+or with yarn
+```bash
+yarn add @dcyou/smb2
+```
 
 ## API
 
