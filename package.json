@@ -1,18 +1,19 @@
 {
-  "name": "@dcyou/smb2",
+  "name": "@tracker1/smb2",
   "description": "SMB2 Client",
-  "homepage": "https://github.com/dcyou/node-smb2",
-  "version": "0.8.1",
+  "homepage": "https://github.com/tracker1/node-smb2",
+  "version": "0.0.0",
+  "license": "MIT",
   "engines": [
     "node"
   ],
   "author": {
-    "name": "David Turbert",
-    "email": "david@dcyou.fr",
-    "url": "https://github.com/dcyou"
+    "name": "Michael J. Ryan",
+    "email": "tracker1@gmail.com",
+    "url": "https://github.com/tracker1"
   },
   "contributors": [
-    "David Turbert <david@dcyou.fr> (https://github.com/dcyou)"
+    "Michael J. Ryan <tracker1@gmail.com> (https://github.com/tracker1)"
   ],
   "main": "lib/smb2.js",
   "repository": {
@@ -20,9 +21,7 @@
     "url": "https://github.com/dcyou/node-smb2"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.34",
-    "bluebird": "^2.10.2",
-    "ntlm": "^0.1.2",
+    "ntlm": "^0.1.3",
     "win32filetime": "^1.0.2"
   },
   "keywords": [
@@ -33,18 +32,6 @@
     "CIFS",
     "Samba"
   ],
-  "scripts": {
-    "build": "./node_modules/.bin/babel --source-maps --out-dir=lib/api/ lib/api/src",
-    "prepublish": "npm run build"
-  },
-  "devDependencies": {
-    "babel": "^5.8.34",
-    "babel-eslint": "^4.1.6",
-    "source-map-support": "^0.4.0",
-    "standard": "^5.4.1"
-  },
-  "standard": {
-    "parser": "babel-eslint"
-  },
-  "license": "MIT"
+  "devDependencies": {},
+  "scripts": {}
 }
