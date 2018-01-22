@@ -1,6 +1,6 @@
 # SMB2 Client for Node.js
 
-[![NPM version](https://badge.fury.io/js/smb2.svg)](http://badge.fury.io/js/smb2) [![Dependency Status](https://david-dm.org/bchelli/node-smb2.svg?theme=shields.io)](https://david-dm.org/bchelli/node-smb2) [![Code Climate](https://codeclimate.com/github/bchelli/node-smb2.svg)](https://codeclimate.com/github/bchelli/node-smb2)
+[![NPM version](https://badge.fury.io/js/smb2.svg)](http://badge.fury.io/js/smb2) [![Dependency Status](https://david-dm.org/tracker1/node-smb2.svg?theme=shields.io)](https://david-dm.org/tracker1/node-smb2) [![Code Climate](https://codeclimate.com/github/tracker1/node-smb2.svg)](https://codeclimate.com/github/tracker1/node-smb2)
 
 ## Introduction
 
@@ -11,11 +11,11 @@ The development is still at an experimental stage and should not be yet consider
 ## Installation
 
 ```bash
-npm install -S dcyou/node-smb2
+npm install -S @tracker1/node-smb2
 ```
 or with yarn
 ```bash
-yarn add dcyou/node-smb2
+yarn add @tracker1/node-smb2
 ```
 
 ## API
