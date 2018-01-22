@@ -2,7 +2,7 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "engines": [
     "node"
