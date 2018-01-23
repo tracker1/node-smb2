@@ -47,7 +47,11 @@ var smb2Client = new SMB2({
 });
 ```
 
-### smb2Client.readdir ( path, [options], callback )
+### Promises
+
+All API methods below will return a Promise, callbacks are optional.
+
+### smb2Client.readdir ( path, [options], [callback] ) : Promise
 - ```path``` String
 - ```options``` Object
     - ```regex``` Regex | Null default = null
@@ -64,7 +68,7 @@ smb2Client.readdir('Windows\\System32', options, function(err, files){
 });
 ```
 
-### smb2Client.readFile ( filename, [options], callback )
+### smb2Client.readFile ( filename, [options], [callback] ) : Promise
 - ```filename``` String
 - ```options``` Object
     - ```encoding``` String | Null default = null
@@ -81,7 +85,7 @@ The callback is passed two arguments (err, data), where data is the contents of 
 
 If no encoding is specified, then the raw buffer is returned.
 
-### smb2Client.writeFile ( filename, data, [options], callback )
+### smb2Client.writeFile ( filename, data, [options], [callback] ) : Promise
 - ```filename``` String
 - ```data``` String | Buffer
 - ```options``` Object
@@ -100,7 +104,7 @@ smb2Client.writeFile('path\\to\\my\\file.txt', 'Hello Node', function (err) {
 });
 ```
 
-### smb2Client.mkdir ( path, [mode], callback )
+### smb2Client.mkdir ( path, [mode], [callback] ) : Promise
 Asynchronous mkdir(2). No arguments other than a possible exception are given to the completion callback. mode defaults to 0777.
 
 Example:
@@ -111,7 +115,7 @@ smb2Client.mkdir('path\\to\\the\\folder', function (err) {
 });
 ```
 
-### smb2Client.rmdir ( path, callback )
+### smb2Client.rmdir ( path, [callback] ) : Promise
 Asynchronous rmdir(2). No arguments other than a possible exception are given to the completion callback.
 
 Example:
@@ -122,7 +126,7 @@ smb2Client.rmdir('path\\to\\the\\folder', function (err) {
 });
 ```
 
-### smb2Client.exists ( path, callback )
+### smb2Client.exists ( path, [callback] ) : Promise
 Test whether or not the given path exists by checking with the file system. Then call the callback argument with either true or false. Example:
 ```javascript
 smb2Client.exists('path\\to\\my\\file.txt', function (err, exists) {
@@ -131,7 +135,7 @@ smb2Client.exists('path\\to\\my\\file.txt', function (err, exists) {
 });
 ```
 
-### smb2Client.unlink ( path, callback )
+### smb2Client.unlink ( path, [callback] ) : Promise
 Asynchronous unlink(2). No arguments other than a possible exception are given to the completion callback.
 ```javascript
 smb2Client.unlink('path\\to\\my\\file.txt', function (err) {
@@ -140,7 +144,7 @@ smb2Client.unlink('path\\to\\my\\file.txt', function (err) {
 });
 ```
 
-### smb2Client.rename ( oldPath, newPath, callback )
+### smb2Client.rename ( oldPath, newPath, [callback] ) : Promise
 Asynchronous rename(2). No arguments other than a possible exception are given to the completion callback.
 ```javascript
 smb2Client.rename('path\\to\\my\\file.txt', 'new\\path\\to\\my\\new-file-name.txt', function (err) {
@@ -152,7 +156,7 @@ smb2Client.rename('path\\to\\my\\file.txt', 'new\\path\\to\\my\\new-file-name.tx
 ### smb2Client.close ( )
 This function will close the open connection if opened, it will be called automatically after ```autoCloseTimeout``` ms of no SMB2 call on the server.
 
-### smb2Client.createReadStream ( fileName, [options], callback )
+### smb2Client.createReadStream ( fileName, [options], [callback] ) : Promise
 Returns a read stream on the file. Unlike fs.createReadStream, this function is asynchronous, as we need use asynchronous smb requests to get the stream.
 
 Example:
@@ -164,7 +168,7 @@ smb2Client.createReadStream('path\\to\\the\\file', function (err, readStream) {
 });
 ```
 
-### smb2Client.createWriteStream ( fileName, [options], callback )
+### smb2Client.createWriteStream ( fileName, [options], [callback] ) : Promise)
 Returns a write stream on the file. Unlike fs.createWriteStream, this function is asynchronous, as we need use asynchronous smb requests to get the stream.
 
 Example:
@@ -175,7 +179,7 @@ smb2Client.createWriteStream('path\\to\\the\\file', function (err, readStream) {
     readStream.pipe(writeStream)
 });
 ```
-### smb2Client.ensureDir ( path, callback )
+### smb2Client.ensureDir ( path, [callback] ) : Promise
 Ensures that the directory exists. If the directory structure does not exist, it is created.
 
 ## Contributors
