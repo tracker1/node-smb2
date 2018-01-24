@@ -20,18 +20,27 @@ yarn add @tracker1/smb2
 
 ## API
 
-### var smb2Client = new SMB2 ( options )
+All API instance methods below (except `.close()`) will return a Promise, callbacks are optional.
+
+All API methods may use unix-style path separators for ease of use, they may also use a leading slash, which will be stripped.
+
+### new SMB2 ( options:object | share:string )
 The SMB2 class is the constructor of your SMB2 client.
 
-the parameter ```options``` accepts this list of attributes:
+the parameter ```share``` supports an smb url string:
 
-- ```share``` (mandatory): the share you want to access
-- ```domain``` (mandatory): the domain of which the user is registred
-- ```username``` (mandatory): the username of the user that access the share
-- ```password``` (mandatory): the password
-- ```port``` (optional): default ```445```, the port of the SMB server
-- ```packetConcurrency``` (optional): default ```20```, the number of simulatanous packet when writting / reading data from the share
-- ```autoCloseTimeout``` (optional): default ```10000```, the timeout in milliseconds before to close the SMB2 session and the socket, if setted to ```0``` the connection will never be closed unless you do it 
+- `smb://username:password@hostname:port/share`
+- Note: each part should be url encoded as necessary.  For domain users: `MyDomain\SomeUser` becomes `MyDomain%5CSomeUser` for the *username* part.
+
+the parameter `options` accepts this list of attributes:
+
+- `share` (mandatory): the share you want to access, this can be url encoded as above or simply `\\host\share`
+- `domain` (mandatory): the domain of which the user is registred
+- `username` (mandatory): the username of the user that access the share
+- `password` (mandatory): the password
+- `port` (optional): default `445`, the port of the SMB server
+- `packetConcurrency` (optional): default `20`, the number of simulatanous packet when writting / reading data from the share
+- `autoCloseTimeout` (optional): default `10000`, the timeout in milliseconds before to close the SMB2 session and the socket, if setted to `0` the connection will never be closed unless you do it 
 
 Example:
 ```javascript
@@ -47,9 +56,6 @@ var smb2Client = new SMB2({
 });
 ```
 
-### Promises
-
-All API methods below will return a Promise, callbacks are optional.
 
 ### smb2Client.readdir ( path, [options], [callback] ) : Promise
 - ```path``` String
@@ -186,6 +192,7 @@ Ensures that the directory exists. If the directory structure does not exist, it
 - [Benjamin Chelli](https://github.com/bchelli)
 - [Fabrice Marsaud](https://github.com/marsaud)
 - [David Turbert](https://github.com/dcyou)
+- [Michael J. Ryan](https://github.com/tracker1)
 
 ## References
 
