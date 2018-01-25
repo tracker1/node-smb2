@@ -2,7 +2,7 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "engines": [
     "node"
@@ -35,6 +35,6 @@
   ],
   "devDependencies": {},
   "scripts": {
-    "format": "prettier --write \"./**/*.js\""
+    "format": "prettier --write \"./**/*.js\" \"*.js\""
   }
 }
