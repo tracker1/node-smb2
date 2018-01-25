@@ -19,7 +19,7 @@
     "Michael J. Ryan <tracker1@gmail.com> (https://github.com/tracker1)",
     "Nicolas Raynaud (https://github.com/nraynaud)",
     "Ronan Abhamon (https://github.com/Wescoeur/)",
-    "Victor Diez (https://github.com/vdiez)",
+    "Victor Diez (https://github.com/vdiez)"
   ],
   "main": "lib/smb2.js",
   "repository": {
