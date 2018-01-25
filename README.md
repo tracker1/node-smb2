@@ -191,6 +191,7 @@ Ensures that the directory exists. If the directory structure does not exist, it
 ## Contributors
 - [Benjamin Chelli](https://github.com/bchelli)
 - [Fabrice Marsaud](https://github.com/marsaud)
+- [Victor Diez](https://github.com/vdiez)
 - [David Turbert](https://github.com/dcyou)
 - [Michael J. Ryan](https://github.com/tracker1)
 

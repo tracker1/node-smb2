@@ -2,7 +2,7 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.13",
+  "version": "0.0.15",
   "license": "MIT",
   "engines": [
     "node"
@@ -13,6 +13,10 @@
     "url": "https://github.com/tracker1"
   },
   "contributors": [
+    "Benjamin Chelli <benjamin@chelli.net> (https://github.com/bchelli)",
+    "Fabrice Marsaud <fabrice.marsaud@vates.fr> (https://github.com/marsaud)",
+    "Victor Diez (https://github.com/vdiez)",
+    "David Turbert <david@dcyou.fr> (https://github.com/dcyou)",
     "Michael J. Ryan <tracker1@gmail.com> (https://github.com/tracker1)"
   ],
   "main": "lib/smb2.js",
