@@ -190,12 +190,15 @@ smb2Client.createWriteStream('path\\to\\the\\file', function (err, readStream) {
 ### smb2Client.ensureDir ( path, [callback] ) : Promise
 Ensures that the directory exists. If the directory structure does not exist, it is created.
 
-## Contributors
+## Contributors (alphabetical order)
 - [Benjamin Chelli](https://github.com/bchelli)
-- [Fabrice Marsaud](https://github.com/marsaud)
-- [Victor Diez](https://github.com/vdiez)
 - [David Turbert](https://github.com/dcyou)
+- [Fabrice Marsaud](https://github.com/marsaud)
+- [Julien Fontanet](https://github.com/julien-f)
 - [Michael J. Ryan](https://github.com/tracker1)
+- [Nicolas Raynaud](https://github.com/nraynaud)
+- [Ronan Abhamon](https://github.com/Wescoeur/)
+- [Victor Diez](https://github.com/vdiez)
 
 ## References
 
