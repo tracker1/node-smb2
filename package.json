@@ -2,11 +2,10 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.15",
+  "version": "0.0.20",
   "license": "MIT",
-  "engines": [
-    "node"
-  ],
+  "engines": { "node" : ">=8.5" },
+  "engineStrict": true,
   "author": {
     "name": "Michael J. Ryan",
     "email": "tracker1@gmail.com",
