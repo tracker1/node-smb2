@@ -2,7 +2,7 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "engines": [
     "node"
@@ -18,7 +18,7 @@
   "main": "lib/smb2.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dcyou/node-smb2"
+    "url": "https://github.com/tracker1/node-smb2"
   },
   "dependencies": {
     "ntlm": "^0.1.3",
