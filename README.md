@@ -24,9 +24,11 @@ yarn add @tracker1/smb2
 
 ## API
 
-All API instance methods below (except `.close()`) will return a Promise. (methods from upstream versions support callbacks, and they remain as an artifact, future versions will break this behavior before 1.0.0);
+All API instance methods below (except `.close()`) will return a Promise.
 
 All API methods may use unix-style path separators for ease of use, they may also use a leading slash, which will be stripped.
+
+WARNING: methods from upstream versions support callbacks, and they remain as an artifact, future versions will break this behavior before 1.0.0
 
 
 ### new SMB2 ( options:object | share:string )
