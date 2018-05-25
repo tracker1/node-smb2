@@ -2,7 +2,7 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "license": "MIT",
   "engines": {
     "node": ">=8.5"
@@ -20,6 +20,7 @@
     "Julien Fontanet (https://github.com/julien-f)",
     "Michael J. Ryan <tracker1@gmail.com> (https://github.com/tracker1)",
     "Nicolas Raynaud (https://github.com/nraynaud)",
+    "Peter Verkoyen (https://github.com/petvek)",
     "Ronan Abhamon (https://github.com/Wescoeur/)",
     "Victor Diez (https://github.com/vdiez)"
   ],
