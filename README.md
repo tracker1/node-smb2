@@ -10,6 +10,7 @@ This library is a simple implementation of SMB2 for Node.js. It allows you to ac
 
 The development is still at an experimental stage and should not be yet considered for production environment.
 
+
 ## Installation
 
 ```bash
@@ -20,11 +21,13 @@ or with yarn
 yarn add @tracker1/smb2
 ```
 
+
 ## API
 
 All API instance methods below (except `.close()`) will return a Promise, callbacks are optional.
 
 All API methods may use unix-style path separators for ease of use, they may also use a leading slash, which will be stripped.
+
 
 ### new SMB2 ( options:object | share:string )
 The SMB2 class is the constructor of your SMB2 client.
@@ -76,6 +79,18 @@ let options = {regex: /42isthesolution/i};
 const files = await snb2Client.readdir('Windows/System32', options);
 ```
 
+`files` will be an array of objects with the following structure.
+
+* `filename`: String
+* `isDirectory`: boolean
+* `size`: Number
+* `fileCreationTime`: [ISO 8601 String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+* `fileChangeTime`: "
+* `fileLastAccessTime`: "
+* `fileLastWriteTime`: "
+* `fileAttributes`: [File Attribute Constants](https://msdn.microsoft.com/fr-fr/library/windows/desktop/gg258117(v=vs.85).aspx)
+
+
 ### smb2Client.readFile ( filename, [options], [callback] ) : Promise
 - ```filename``` String
 - ```options``` Object
@@ -88,6 +103,7 @@ const data = await smb2Client.readFile('path/to/my/file.txt');
 ```
 
 If no encoding is specified, then the raw buffer is returned.
+
 
 ### smb2Client.writeFile ( filename, data, [options], [callback] ) : Promise
 - ```filename``` String
@@ -105,6 +121,7 @@ Example:
 await smb2Client.writeFile('path/to/my/file.txt', 'Hello Node');
 ```
 
+
 ### smb2Client.mkdir ( path, [mode], [callback] ) : Promise
 Asynchronous mkdir(2). No arguments other than a possible exception are given to the completion callback. mode defaults to 0777.
 
@@ -112,6 +129,7 @@ Example:
 ```javascript
 await smb2Client.mkdir('path/to/the/folder');
 ```
+
 
 ### smb2Client.rmdir ( path, [callback] ) : Promise
 Asynchronous rmdir(2). No arguments other than a possible exception are given to the completion callback.
@@ -121,11 +139,13 @@ Example:
 await smb2Client.rmdir('path/to/the/folder');
 ```
 
+
 ### smb2Client.exists ( path, [callback] ) : Promise
 Test whether or not the given path exists by checking with the file system. Then call the callback argument with either true or false. Example:
 ```javascript
 const exists = await smb2Client.exists('path/to/my/file.txt');
 ```
+
 
 ### smb2Client.unlink ( path, [callback] ) : Promise
 Asynchronous unlink(2). No arguments other than a possible exception are given to the completion callback.
@@ -133,11 +153,13 @@ Asynchronous unlink(2). No arguments other than a possible exception are given t
 await smb2Client.unlink('path/to/my/file.txt');
 ```
 
+
 ### smb2Client.rename ( oldPath, newPath, [callback] ) : Promise
 Asynchronous rename(2). No arguments other than a possible exception are given to the completion callback.
 ```javascript
 await smb2Client.rename('path/to/the/file.txt', 'new/path/to/my/new-file-name.txt');
 ```
+
 
 ### smb2Client.close ( )
 This function will close the open connection if opened, it will be called automatically after ```autoCloseTimeout``` ms of no SMB2 call on the server.
@@ -147,6 +169,7 @@ Example:
 mb2Client.close(); // no promise returned
 ```
 
+
 ### smb2Client.createReadStream ( fileName, [options], [callback] ) : Promise
 Returns a read stream on the file. Unlike fs.createReadStream, this function is asynchronous, as we need use asynchronous smb requests to get the stream.
 
@@ -155,6 +178,7 @@ Example:
 const readStream = await smb2Client.createReadStream('path/to/the/file');
 ```
 
+
 ### smb2Client.createWriteStream ( fileName, [options], [callback] ) : Promise)
 Returns a write stream on the file. Unlike fs.createWriteStream, this function is asynchronous, as we need use asynchronous smb requests to get the stream.
 
@@ -162,6 +186,7 @@ Example:
 ```javascript
 const writeStream = await smb2Client.createWriteStream('path/to/the/file');
 ```
+
 
 ### smb2Client.ensureDir ( path, [callback] ) : Promise
 Ensures that the directory exists. If the directory structure does not exist, it is created.
