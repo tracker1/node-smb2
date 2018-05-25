@@ -2,9 +2,11 @@
   "name": "@tracker1/smb2",
   "description": "SMB2 Client",
   "homepage": "https://github.com/tracker1/node-smb2",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "license": "MIT",
-  "engines": { "node" : ">=8.5" },
+  "engines": {
+    "node": ">=8.5"
+  },
   "engineStrict": true,
   "author": {
     "name": "Michael J. Ryan",
